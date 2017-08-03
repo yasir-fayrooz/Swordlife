@@ -73,7 +73,6 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = theScale;
 
                 myAnimator.SetBool("swipeAttack", true);
-                myAnimator.SetBool("swipeAttack", false);
 
             }
             if (distance.x < 0)
@@ -89,7 +88,6 @@ public class PlayerController : MonoBehaviour {
                     
                 }
                 myAnimator.SetBool("swipeAttack", true);
-                myAnimator.SetBool("swipeAttack", false);
             }
         }
         else if (Mathf.Abs(distance.x) < Mathf.Abs(distance.y))
@@ -100,13 +98,11 @@ public class PlayerController : MonoBehaviour {
         {
             Debug.Log("Down Swipe");
             myAnimator.SetBool("swipeDuck", true);
-            myAnimator.SetBool("swipeDuck", false);
         }
         if (distance.y > 0)
         {
             Debug.Log("Up Swipe");
             myAnimator.SetBool("swipeJump", true);
-            myAnimator.SetBool("swipeJump", false);
         }
     }
 }
