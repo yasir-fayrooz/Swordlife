@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 0.5
-  minSwipeDist: 50
+  minSwipeDist: 5
 --- !u!4 &1764164373
 Transform:
   m_ObjectHideFlags: 0
