@@ -54,6 +54,9 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
+        myAnimator.SetBool("swipeAttack", false);
+        myAnimator.SetBool("swipeDuck", false);
+        myAnimator.SetBool("swipeJump", false);
     }
     public void swipe()
     {
@@ -73,7 +76,6 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = theScale;
 
                 myAnimator.SetBool("swipeAttack", true);
-
             }
             if (distance.x < 0)
             {
