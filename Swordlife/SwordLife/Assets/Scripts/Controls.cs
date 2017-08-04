@@ -14,16 +14,8 @@ public class Controls : MonoBehaviour
     Vector2 firstClickPos;
     Vector2 secondClickPos;
 
-    //animator
-    private Animator myAnimator;
-
     public static Swipe swipeDirection;
 
-    // Use this for initialization
-    void Start()
-    {
-        myAnimator = GetComponent<Animator>();
-    }
 
     void Update()
     {

@@ -25,37 +25,9 @@ public class PlayerScript : MonoBehaviour {
         //handles all controls
         HandleInput();
         HandleAnimations();
+        flip();
         ResetValues();
 
-
-        if (Controls.swipeDirection == Swipe.Right)
-        {
-            //flip character scale
-            if (facingRight)
-            {
-                Vector3 theScale = transform.localScale;
-                theScale.x *= 1;
-                transform.localScale = theScale;
-            }
-            else {
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
-                facingRight = true;
-            }
-        }
-        if (Controls.swipeDirection == Swipe.Left)
-        {
-            if (facingRight)
-            {
-                //flip character scale
-                facingRight = false;
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
-
-            }
-        }
     }
     private void HandleInput()
     {
@@ -91,6 +63,36 @@ public class PlayerScript : MonoBehaviour {
             myAnimator.SetTrigger("swipeDuck");
         }
     }
+    private void flip()
+    {
+        if (Controls.swipeDirection == Swipe.Right)
+        {
+            //flip character scale
+            if (facingRight)
+            {
+                facingRight = true;
+            }
+            else {
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+                facingRight = true;
+            }
+        }
+        if (Controls.swipeDirection == Swipe.Left)
+        {
+            if (facingRight)
+            {
+                //flip character scale
+                facingRight = false;
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+
+            }
+        }
+    }
+
     private void ResetValues()
     {
         attack = false;
