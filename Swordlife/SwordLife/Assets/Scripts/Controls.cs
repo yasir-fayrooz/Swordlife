@@ -14,8 +14,6 @@ public class Controls : MonoBehaviour
     Vector2 firstClickPos;
     Vector2 secondClickPos;
 
-    //player stuff
-    private bool facingRight;
     //animator
     private Animator myAnimator;
 
@@ -73,27 +71,11 @@ public class Controls : MonoBehaviour
                 {
                     swipeDirection = Swipe.Left;
                     Debug.Log("Left");
-
-                    if (facingRight)
-                    {
-                        //flip character scale
-                        facingRight = false;
-                        Vector3 theScale = transform.localScale;
-                        theScale.x *= -1;
-                        transform.localScale = theScale;
-
-                    }
                 }
                 else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Right;
                     Debug.Log("right");
-
-                    //flip player
-                    facingRight = true;
-                    Vector3 theScale = transform.localScale;
-                    theScale.x *= -1;
-                    transform.localScale = theScale;
                 }
             }
         }
@@ -138,26 +120,11 @@ public class Controls : MonoBehaviour
                     swipeDirection = Swipe.Left;
                     Debug.Log("Left");
 
-                    if (facingRight)
-                    {
-                        //flip character scale
-                        facingRight = false;
-                        Vector3 theScale = transform.localScale;
-                        theScale.x *= -1;
-                        transform.localScale = theScale;
-
-                    }
                 }
                 else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Right;
                     Debug.Log("right");
-
-                    //flip player
-                    facingRight = true;
-                    Vector3 theScale = transform.localScale;
-                    theScale.x *= -1;
-                    transform.localScale = theScale;
                 }
             }
 
