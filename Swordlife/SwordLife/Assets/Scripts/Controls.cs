@@ -52,22 +52,18 @@ public class Controls : MonoBehaviour
                 if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
                     swipeDirection = Swipe.Up;
-                    Debug.Log("Up");
                 }
                 else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
                     swipeDirection = Swipe.Down;
-                    Debug.Log("Down");
                 }
                 else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Left;
-                    Debug.Log("Left");
                 }
                 else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Right;
-                    Debug.Log("right");
                 }
             }
         }
@@ -100,23 +96,19 @@ public class Controls : MonoBehaviour
                 if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
                     swipeDirection = Swipe.Up;
-                    Debug.Log("Up");
                 }
                 else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
                     swipeDirection = Swipe.Down;
-                    Debug.Log("Down");
                 }
                 else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Left;
-                    Debug.Log("Left");
 
                 }
                 else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     swipeDirection = Swipe.Right;
-                    Debug.Log("right");
                 }
             }
 

@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviour {
         ResetValues();
 
     }
+
     private void HandleInput()
     {
         if (Controls.swipeDirection == Swipe.Left)
