@@ -72,7 +72,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e5a2769152154e94e94a71dd5e693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 400
+  movementSpeed: 200
 --- !u!212 &212005514202368686
 SpriteRenderer:
   m_ObjectHideFlags: 1
