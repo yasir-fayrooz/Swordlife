@@ -13,11 +13,6 @@ public class SwordCollider : MonoBehaviour {
         colliders[1].enabled = false;
         colliders[2].enabled = false;
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-    }
 
     void DisableChildComponents()
     {
