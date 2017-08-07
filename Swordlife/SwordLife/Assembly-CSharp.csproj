@@ -53,14 +53,16 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AdvancedPolygonCollider\Script\AdvancedPolygonCollider.cs" />
      <Compile Include="Assets\Scripts\AdvancedPolygonCollider\Script\AdvancedPolygonColliderUtilities.cs" />
-     <Compile Include="Assets\Scripts\Controls.cs" />
-     <Compile Include="Assets\Scripts\DestroyEnemySword.cs" />
-     <Compile Include="Assets\Scripts\EnemyManager.cs" />
-     <Compile Include="Assets\Scripts\PauseButton\PauseMenu.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-     <Compile Include="Assets\Scripts\SawScript.cs" />
-     <Compile Include="Assets\Scripts\SwordCollider.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy\HitDetection.cs" />
+     <Compile Include="Assets\Scripts\Enemy\SawScript.cs" />
+     <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\Controls.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\SwordCollider.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\SwordSwing.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
