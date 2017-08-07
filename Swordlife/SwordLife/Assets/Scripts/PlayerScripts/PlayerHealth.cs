@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour {
     public void Damage(int dmg)
     {
         currentHealth -= dmg;
+        gameObject.GetComponent<Animation>().Play("Hit_Animation");
     }
 
     void Die()
