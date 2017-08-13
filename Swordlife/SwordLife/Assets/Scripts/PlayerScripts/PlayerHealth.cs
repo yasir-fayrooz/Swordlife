@@ -8,8 +8,6 @@ public class PlayerHealth : MonoBehaviour {
 
     public int startingHealth = 3;
     public int currentHealth;
-	public GameObject scorecounter;
-	public float score;
     
 	// Use this for initialization
 	void Start () {
@@ -29,15 +27,6 @@ public class PlayerHealth : MonoBehaviour {
             Die();
         }
 	}
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Saw")
-		{
-			score+=1;
-			scorecounter.GetComponent<Text>().text = score.ToString();
-			Destroy(col.gameObject);
-		}
- 	}
 
     public void Damage(int dmg)
     {

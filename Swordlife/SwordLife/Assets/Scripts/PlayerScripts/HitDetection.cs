@@ -16,10 +16,7 @@ public class HitDetection : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "BoxCollider")
-        {
             PlayerHP.Damage(1);
-			Destroy(gameObject);
-        }
+			Destroy(col.gameObject);
     }
 }
