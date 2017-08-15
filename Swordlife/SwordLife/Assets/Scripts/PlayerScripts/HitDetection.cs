@@ -14,7 +14,10 @@ public class HitDetection : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.tag == "Saw")
+        {
             PlayerHP.Damage(1);
-			Destroy(col.gameObject);
+            Destroy(col.gameObject);
+        }
     }
 }

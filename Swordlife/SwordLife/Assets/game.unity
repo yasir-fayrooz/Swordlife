@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 878990656}
-  enemy: {fileID: 1547479661297768, guid: d595d99e116829846b66c4db2a162319, type: 2}
+  enemy: {fileID: 1332933842001488, guid: 4e7aea3d85099c549a8b24a17123b28f, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1594342905}
@@ -1682,7 +1682,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594342904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -420, y: -140, z: 0}
+  m_LocalPosition: {x: -420, y: -220, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1967,7 +1967,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898805599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 420, y: -140, z: 0}
+  m_LocalPosition: {x: 420, y: -220, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class SwordSwing : MonoBehaviour {
     private scoreCount scoreCount;
+    private PlayerHealth PlayerHP;
 
     void Start()
     {
+        PlayerHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         scoreCount = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>();
     }
 
@@ -15,7 +17,7 @@ public class SwordSwing : MonoBehaviour {
     {
         if (col.gameObject.tag == "Saw")
         {
-			scoreCount.score+=1;
+            PlayerHP.Damage(1);
             Destroy(col.gameObject);
         }
     }
