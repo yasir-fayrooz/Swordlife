@@ -3,10 +3,10 @@
 public class EnemyManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;       // Reference to the player's heatlh.
-    public GameObject enemy;                // The enemy prefab to be spawned.
+    public GameObject[] enemies;                // The enemy prefab to be spawned.
     public float spawnTime = 7f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
-    public static bool spawnSide;
+    public bool spawnSide;
     void Start()
     {
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
@@ -24,18 +24,39 @@ public class EnemyManager : MonoBehaviour
         }
 
         // Find a random index between zero and one less than the number of spawn points.
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+        int EnemyType = Random.Range(0, enemies.Length);
+
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-
-        if (spawnPointIndex == 0)
+        if (EnemyType == 1) //Drone
         {
-            spawnSide = true;
-        } else
-        {
-            spawnSide = false;
+            int DroneSpawnPointIndex = Random.Range(2, 4);
+            Debug.Log(DroneSpawnPointIndex);
+            if (DroneSpawnPointIndex == 2)
+            {
+                spawnSide = true;
+            }
+            else if (DroneSpawnPointIndex == 3)
+            {
+                spawnSide = false;
+            }
+            Instantiate(enemies[EnemyType], spawnPoints[DroneSpawnPointIndex].position, spawnPoints[DroneSpawnPointIndex].rotation);
         }
 
+        if(EnemyType == 0) //Saw
+        {
+            int SawSpawnPointIndex = Random.Range(0, 2);
+            Debug.Log(SawSpawnPointIndex);
+            if (SawSpawnPointIndex == 0)
+            {
+                spawnSide = true;
+            }
+            else if (SawSpawnPointIndex == 1)
+            {
+                spawnSide = false;
+            }
+            Instantiate(enemies[EnemyType], spawnPoints[SawSpawnPointIndex].position, spawnPoints[SawSpawnPointIndex].rotation);
+        }
+        Debug.Log(spawnSide);
     }
 }

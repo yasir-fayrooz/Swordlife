@@ -20,5 +20,10 @@ public class SwordSwing : MonoBehaviour {
             PlayerHP.Damage(1);
             Destroy(col.gameObject);
         }
+        if (col.gameObject.tag == "Drone")
+        {
+            scoreCount.score += 1;
+            Destroy(col.gameObject);
+        }
     }
 }

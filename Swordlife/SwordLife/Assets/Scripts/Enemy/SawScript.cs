@@ -5,7 +5,7 @@ using UnityEngine;
 public class SawScript : MonoBehaviour {
 
     private Rigidbody2D sawRigidbody;
-
+    private bool spawnSide;
     [SerializeField]
     private float movementSpeed;
 
@@ -13,6 +13,7 @@ public class SawScript : MonoBehaviour {
 	void Start ()
     {
         sawRigidbody = GetComponent<Rigidbody2D>();
+        spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
 	}
 
 	// Update is called once per frame
@@ -24,11 +25,11 @@ public class SawScript : MonoBehaviour {
 
     private void HandleMovement()
     {
-        if (EnemyManager.spawnSide)
+        if (spawnSide)
         {
             sawRigidbody.velocity = Vector2.right * movementSpeed;
         }
-        if(EnemyManager.spawnSide == false)
+        if(spawnSide == false)
         {
             sawRigidbody.velocity = Vector2.left * movementSpeed;
         }

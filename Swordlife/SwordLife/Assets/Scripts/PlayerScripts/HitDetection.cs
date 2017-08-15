@@ -19,5 +19,10 @@ public class HitDetection : MonoBehaviour {
             PlayerHP.Damage(1);
             Destroy(col.gameObject);
         }
+        if (col.tag == "Drone")
+        {
+            PlayerHP.Damage(1);
+            Destroy(col.gameObject);
+        }
     }
 }
