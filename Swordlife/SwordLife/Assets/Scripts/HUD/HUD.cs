@@ -13,13 +13,14 @@ public class HUD : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         playerHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
         ScreenRotate();
-        HeartUI.sprite = HeartSprites[playerHP.currentHealth];
+            HeartUI.sprite = HeartSprites[playerHP.currentHealth];
     }
 
     void ScreenRotate()
@@ -30,6 +31,9 @@ public class HUD : MonoBehaviour
         {
             Screen.orientation = ScreenOrientation.LandscapeLeft;
         }
-
+        else if(Input.deviceOrientation == DeviceOrientation.LandscapeRight)
+        {
+            Screen.orientation = ScreenOrientation.LandscapeRight;
+        }
     }
 }

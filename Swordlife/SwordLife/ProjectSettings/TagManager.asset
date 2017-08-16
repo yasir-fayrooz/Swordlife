@@ -8,6 +8,7 @@ TagManager:
   - SwordSwing
   - BoxCollider
   - Drone
+  - HealthBar
   layers:
   - Default
   - TransparentFX

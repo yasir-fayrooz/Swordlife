@@ -1143,9 +1143,10 @@ GameObject:
   - component: {fileID: 1168336790}
   - component: {fileID: 1168336792}
   - component: {fileID: 1168336791}
+  - component: {fileID: 1168336793}
   m_Layer: 5
   m_Name: Health
-  m_TagString: Untagged
+  m_TagString: HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1165,8 +1166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3, y: 207.95}
-  m_SizeDelta: {x: 149.1, y: 65.9}
+  m_AnchoredPosition: {x: 0, y: 214.30002}
+  m_SizeDelta: {x: 296.43, y: 131.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168336791
 MonoBehaviour:
@@ -1187,7 +1188,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fd13132343470704fb524e69a4f6952c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8134e5966179b8d45ac0ca9cdaafc4a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1201,6 +1202,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168336789}
+--- !u!111 &1168336793
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168336789}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 377f1fc28a7bc664fbe26d909ec90d21, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 377f1fc28a7bc664fbe26d909ec90d21, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1201703908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,10 +1617,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeartSprites:
-  - {fileID: 21300000, guid: 298ff86172bd10c4da3d57f691d9a20f, type: 3}
-  - {fileID: 21300000, guid: 8897dbdafc0e5f34893e3471c4888e95, type: 3}
-  - {fileID: 21300000, guid: 36d97265c5abb62499836378e1ef1f39, type: 3}
-  - {fileID: 21300000, guid: fd13132343470704fb524e69a4f6952c, type: 3}
+  - {fileID: 21300000, guid: 30e723412e63c0643aabb8445bd9ffc4, type: 3}
+  - {fileID: 21300000, guid: fe81c108684685c45b6f528aba2c3fb0, type: 3}
+  - {fileID: 21300000, guid: 55ac32dc7e824764ead0e1cca2d89115, type: 3}
+  - {fileID: 21300000, guid: 8134e5966179b8d45ac0ca9cdaafc4a6, type: 3}
   HeartUI: {fileID: 1168336791}
 --- !u!114 &1466598080
 MonoBehaviour:

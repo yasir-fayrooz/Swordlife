@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Enemy\ScorePlusOnExit.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\HUD\PlayAgain.cs" />
      <Compile Include="Assets\Scripts\HUD\scoreCount.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Controls.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\HitDetection.cs" />

@@ -31,7 +31,6 @@ public class EnemyManager : MonoBehaviour
         if (EnemyType == 1) //Drone
         {
             int DroneSpawnPointIndex = Random.Range(2, 4);
-            Debug.Log(DroneSpawnPointIndex);
             if (DroneSpawnPointIndex == 2)
             {
                 spawnSide = true;
@@ -46,7 +45,6 @@ public class EnemyManager : MonoBehaviour
         if(EnemyType == 0) //Saw
         {
             int SawSpawnPointIndex = Random.Range(0, 2);
-            Debug.Log(SawSpawnPointIndex);
             if (SawSpawnPointIndex == 0)
             {
                 spawnSide = true;
@@ -57,6 +55,5 @@ public class EnemyManager : MonoBehaviour
             }
             Instantiate(enemies[EnemyType], spawnPoints[SawSpawnPointIndex].position, spawnPoints[SawSpawnPointIndex].rotation);
         }
-        Debug.Log(spawnSide);
     }
 }
