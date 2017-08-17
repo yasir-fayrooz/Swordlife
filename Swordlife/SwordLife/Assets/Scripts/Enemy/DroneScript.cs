@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DroneScript : MonoBehaviour {
 
-    private Rigidbody2D sawRigidbody;
+    private Rigidbody2D DroneRigidbody;
     private bool spawnSide;
     private bool DroneShock = false;
     private Animator myAnimator;
@@ -15,7 +15,7 @@ public class DroneScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        sawRigidbody = GetComponent<Rigidbody2D>();
+        DroneRigidbody = GetComponent<Rigidbody2D>();
         spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
         spawnArea();
         myAnimator = gameObject.GetComponent<Animator>();
@@ -41,19 +41,19 @@ public class DroneScript : MonoBehaviour {
     {
         if (spawnSide)
         {
-            sawRigidbody.velocity = Vector2.right * movementSpeed;
+            DroneRigidbody.velocity = Vector2.right * movementSpeed;
 
         }
         if(spawnSide == false)
         {
-            sawRigidbody.velocity = Vector2.left * movementSpeed;
+            DroneRigidbody.velocity = Vector2.left * movementSpeed;
         }
     }
 
-    void DroneDestroy()
+    void DroneFly()
     {
         DroneShock = false;
-        myAnimator.Play("Drone_Destroy");
+        myAnimator.Play("Drone_Fly_Animation");
     }
     void DroneDestroy2()
     {

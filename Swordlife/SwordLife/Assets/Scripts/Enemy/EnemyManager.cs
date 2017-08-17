@@ -28,6 +28,22 @@ public class EnemyManager : MonoBehaviour
 
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+
+        if (EnemyType == 0) //Saw
+        {
+            int SawSpawnPointIndex = Random.Range(0, 2);
+            if (SawSpawnPointIndex == 0)
+            {
+                spawnSide = true;
+            }
+            else if (SawSpawnPointIndex == 1)
+            {
+                spawnSide = false;
+            }
+            Instantiate(enemies[EnemyType], spawnPoints[SawSpawnPointIndex].position, spawnPoints[SawSpawnPointIndex].rotation);
+        }
+
+
         if (EnemyType == 1) //Drone
         {
             int DroneSpawnPointIndex = Random.Range(2, 4);
@@ -42,18 +58,18 @@ public class EnemyManager : MonoBehaviour
             Instantiate(enemies[EnemyType], spawnPoints[DroneSpawnPointIndex].position, spawnPoints[DroneSpawnPointIndex].rotation);
         }
 
-        if(EnemyType == 0) //Saw
+        if (EnemyType == 2) //Laser
         {
-            int SawSpawnPointIndex = Random.Range(0, 2);
-            if (SawSpawnPointIndex == 0)
+            int LaserSpawnPointIndex = Random.Range(4, 6);
+            if (LaserSpawnPointIndex == 4)
             {
                 spawnSide = true;
             }
-            else if (SawSpawnPointIndex == 1)
+            else if (LaserSpawnPointIndex == 5)
             {
                 spawnSide = false;
             }
-            Instantiate(enemies[EnemyType], spawnPoints[SawSpawnPointIndex].position, spawnPoints[SawSpawnPointIndex].rotation);
+            Instantiate(enemies[EnemyType], spawnPoints[LaserSpawnPointIndex].position, spawnPoints[LaserSpawnPointIndex].rotation);
         }
     }
 }
