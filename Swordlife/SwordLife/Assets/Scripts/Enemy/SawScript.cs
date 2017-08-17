@@ -14,7 +14,8 @@ public class SawScript : MonoBehaviour {
     {
         sawRigidbody = GetComponent<Rigidbody2D>();
         spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
-	}
+        spawnArea();
+    }
 
 	// Update is called once per frame
 	void Update ()
@@ -28,10 +29,20 @@ public class SawScript : MonoBehaviour {
         if (spawnSide)
         {
             sawRigidbody.velocity = Vector2.right * movementSpeed;
+
         }
         if(spawnSide == false)
         {
             sawRigidbody.velocity = Vector2.left * movementSpeed;
+        }
+    }
+    void spawnArea()
+    {
+        if (spawnSide)
+        {
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
         }
     }
 

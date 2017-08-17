@@ -19,10 +19,10 @@ public class HitDetection : MonoBehaviour {
             PlayerHP.Damage(1);
             Destroy(col.gameObject);
         }
-        if (col.tag == "Drone")
+        if (col.gameObject.tag == "Drone")
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Shock_Animation");
             PlayerHP.Damage(1);
-            Destroy(col.gameObject);
         }
     }
 }

@@ -454,7 +454,7 @@ MonoBehaviour:
   playerHealth: {fileID: 878990656}
   enemies:
   - {fileID: 1332933842001488, guid: 4e7aea3d85099c549a8b24a17123b28f, type: 2}
-  - {fileID: 1547479661297768, guid: d595d99e116829846b66c4db2a162319, type: 2}
+  - {fileID: 1694123418185780, guid: 302c1d5129e6f1a4f84330bef100e12b, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1594342905}

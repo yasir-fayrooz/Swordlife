@@ -22,8 +22,8 @@ public class SwordSwing : MonoBehaviour {
         }
         if (col.gameObject.tag == "Drone")
         {
+            GameObject.FindGameObjectWithTag("Drone").GetComponent<Animator>().Play("Drone_Destroy");
             scoreCount.score += 1;
-            Destroy(col.gameObject);
         }
     }
 }
