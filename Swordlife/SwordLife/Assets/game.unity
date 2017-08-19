@@ -455,7 +455,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1332933842001488, guid: 4e7aea3d85099c549a8b24a17123b28f, type: 2}
   - {fileID: 1694123418185780, guid: 302c1d5129e6f1a4f84330bef100e12b, type: 2}
-  - {fileID: 1634427157895440, guid: 9904b8be6a940874ab06115221a4ca24, type: 2}
+  - {fileID: 1630673366864614, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1594342905}
@@ -622,7 +622,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 731897693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -323, y: -125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -932,7 +932,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046476632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 323, y: -125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

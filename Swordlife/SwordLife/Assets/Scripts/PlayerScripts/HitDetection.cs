@@ -24,5 +24,11 @@ public class HitDetection : MonoBehaviour {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Shock_Animation");
             PlayerHP.Damage(1);
         }
+        if (col.gameObject.tag == "LaserShot" || col.gameObject.tag == "LaserShot1")
+        {
+            Destroy(col.gameObject);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Shock_Animation");
+            PlayerHP.Damage(1);
+        }
     }
 }

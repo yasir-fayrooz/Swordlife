@@ -9,6 +9,9 @@ TagManager:
   - BoxCollider
   - Drone
   - HealthBar
+  - Laser
+  - LaserShot
+  - LaserShot1
   layers:
   - Default
   - TransparentFX
