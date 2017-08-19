@@ -16,5 +16,9 @@ public class ScorePlusOnExit : MonoBehaviour
         {
             scoreCount.score += 1;
         }
+        if (col.tag == "LaserShot" || col.tag == "LaserShot1")
+        {
+            scoreCount.score += 1;
+        }
     }
 }
