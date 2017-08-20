@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Enemy\SawScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\ScorePlusOnExit.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\HUD\Menu.cs" />
      <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\HUD\PlayAgain.cs" />
      <Compile Include="Assets\Scripts\HUD\scoreCount.cs" />
