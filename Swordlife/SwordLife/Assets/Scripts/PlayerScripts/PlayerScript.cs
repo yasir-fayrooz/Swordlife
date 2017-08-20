@@ -66,6 +66,12 @@ public class PlayerScript : MonoBehaviour {
     }
     private void flip()
     {
+        int currentHealth = gameObject.GetComponent<PlayerHealth>().currentHealth;
+        if (currentHealth == 0)
+        {
+            return;
+        }
+
         if (Controls.swipeDirection == Swipe.Right)
         {
             //flip character scale

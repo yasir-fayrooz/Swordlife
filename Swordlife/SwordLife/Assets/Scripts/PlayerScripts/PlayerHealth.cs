@@ -41,6 +41,8 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
+        
         gameOverUI.SetActive(true);
+        gameObject.GetComponent<Animator>().Play("Die_Animation");
     }
 }
