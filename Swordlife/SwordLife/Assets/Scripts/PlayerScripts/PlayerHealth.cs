@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour {
 
     public int startingHealth = 3;
     public int currentHealth;
+
+    [SerializeField]
+    private GameObject gameOverUI;
     
 	// Use this for initialization
 	void Start () {
@@ -38,6 +41,6 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
-        SceneManager.LoadScene(2);
+        gameOverUI.SetActive(true);
     }
 }

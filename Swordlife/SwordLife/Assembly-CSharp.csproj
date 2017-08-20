@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Enemy\LaserShot.cs" />
      <Compile Include="Assets\Scripts\Enemy\SawScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\ScorePlusOnExit.cs" />
+     <Compile Include="Assets\Scripts\HUD\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\HUD\Menu.cs" />
      <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
