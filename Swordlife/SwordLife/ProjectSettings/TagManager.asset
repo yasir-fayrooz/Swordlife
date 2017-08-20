@@ -12,6 +12,7 @@ TagManager:
   - Laser
   - LaserShot
   - LaserShot1
+  - GameOverUI
   layers:
   - Default
   - TransparentFX

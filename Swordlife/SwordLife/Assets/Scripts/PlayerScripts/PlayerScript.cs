@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
     private bool duck;
     //animator
     private Animator myAnimator;
+    public GameObject GameOverUI;
 
     // Use this for initialization
     void Start()
@@ -21,6 +22,10 @@ public class PlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (GameOverUI.activeInHierarchy)
+        {
+            return;
+        }
 
         //handles all controls
         HandleInput();
@@ -66,11 +71,6 @@ public class PlayerScript : MonoBehaviour {
     }
     private void flip()
     {
-        int currentHealth = gameObject.GetComponent<PlayerHealth>().currentHealth;
-        if (currentHealth == 0)
-        {
-            return;
-        }
 
         if (Controls.swipeDirection == Swipe.Right)
         {
