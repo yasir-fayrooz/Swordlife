@@ -8,8 +8,14 @@ public class Menu : MonoBehaviour {
 
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
+    public GameObject Highscore;
 
     public Slider[] volumeSliders;
+
+    void Start()
+    {
+        Highscore.GetComponent<Text>().text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
+    }
 
     public void Play()
     {
