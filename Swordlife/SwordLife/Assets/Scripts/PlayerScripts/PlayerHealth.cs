@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public int startingHealth = 3;
     public int currentHealth;
+    public float score;
 
     [SerializeField]
     private GameObject gameOverUI;
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () 
 	{
 
-		if (currentHealth > startingHealth)
+        if (currentHealth > startingHealth)
         {
             currentHealth = startingHealth;
         }
@@ -41,6 +42,10 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
+        if(PlayerPrefs.GetFloat("Highscore") < GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>().score)
+        {
+            PlayerPrefs.SetFloat("Highscore", GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>().score);
+        }
         gameObject.GetComponent<Animator>().Play("Die_Animation");
         gameOverUI.SetActive(true);
     }
