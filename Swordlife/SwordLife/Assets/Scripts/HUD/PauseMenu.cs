@@ -40,12 +40,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
-		Time.timeScale = 1;
+        paused = false;
+        SceneManager.LoadScene(0);
     }
     public void Quit()
     {
