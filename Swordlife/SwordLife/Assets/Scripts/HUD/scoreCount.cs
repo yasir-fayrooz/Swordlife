@@ -7,7 +7,7 @@ public class scoreCount : MonoBehaviour {
 
     public GameObject scorecount;
     public GameObject YourScoreWas;
-    public Text Highscore;
+    public GameObject Highscore;
 
     public float score;
 
@@ -19,7 +19,7 @@ public class scoreCount : MonoBehaviour {
     void Update()
     {
         scorecount.GetComponent<Text>().text = score.ToString();
-        YourScoreWas.GetComponent<Text>().text = "Score: " + score.ToString();
-        Highscore.text = "Highscore: " + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
+        YourScoreWas.GetComponent<Text>().text = score.ToString();
+        Highscore.GetComponent<Text>().text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
     }
 }
