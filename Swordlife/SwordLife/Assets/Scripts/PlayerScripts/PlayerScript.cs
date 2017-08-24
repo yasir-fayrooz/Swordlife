@@ -14,10 +14,14 @@ public class PlayerScript : MonoBehaviour {
     private Animator myAnimator;
     public GameObject GameOverUI;
 
+    // turn player to the left
+    private float PlayerScale;
+
     // Use this for initialization
     void Start()
     {
         myAnimator = GetComponent<Animator>();
+        PlayerScale = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -80,9 +84,7 @@ public class PlayerScript : MonoBehaviour {
                 facingRight = true;
             }
             else {
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
+                transform.localScale = new Vector3(-PlayerScale, transform.localScale.y);
                 facingRight = true;
             }
         }
@@ -92,9 +94,7 @@ public class PlayerScript : MonoBehaviour {
             {
                 //flip character scale
                 facingRight = false;
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
+                transform.localScale = new Vector3(+PlayerScale, transform.localScale.y);
 
             }
         }
