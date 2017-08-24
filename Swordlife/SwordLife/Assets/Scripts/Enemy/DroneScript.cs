@@ -6,15 +6,17 @@ public class DroneScript : MonoBehaviour {
 
     private Rigidbody2D DroneRigidbody;
     private bool spawnSide;
+    private bool CollisionDetect = false;
     private bool DroneShock = false;
     private Animator myAnimator;
 
     [SerializeField]
-    public float movementSpeed;
+    public static float movementSpeed = 250;
 
 	// Use this for initialization
 	void Start ()
     {
+
         DroneRigidbody = GetComponent<Rigidbody2D>();
         spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
         spawnArea();
@@ -30,10 +32,17 @@ public class DroneScript : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.tag == "LaserShot1" || col.tag == "LaserShot" || col.tag == "Saw")
+        {
+            CollisionDetect = false;
+        }
+        else
+        {
+            CollisionDetect = true;
+        }
         if(col.tag == "BoxCollider")
         {
             DroneShock = true;
-            movementSpeed = 0;
         }
     }
 
@@ -41,12 +50,24 @@ public class DroneScript : MonoBehaviour {
     {
         if (spawnSide)
         {
-            DroneRigidbody.velocity = Vector2.right * movementSpeed;
-
+            if (DroneShock || CollisionDetect == true)
+            {
+                DroneRigidbody.velocity = Vector2.right * 0;
+            } else
+            {
+                DroneRigidbody.velocity = Vector2.right * DroneScript.movementSpeed;
+            }
         }
         if(spawnSide == false)
         {
-            DroneRigidbody.velocity = Vector2.left * movementSpeed;
+            if (DroneShock || CollisionDetect == true)
+            {
+                DroneRigidbody.velocity = Vector2.left * 0;
+            }
+            else
+            {
+                DroneRigidbody.velocity = Vector2.left * DroneScript.movementSpeed;
+            }
         }
     }
 

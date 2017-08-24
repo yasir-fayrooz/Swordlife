@@ -6,19 +6,24 @@ using UnityEngine.UI;
 public class scoreCount : MonoBehaviour {
 
     public GameObject scorecount;
+    public GameObject levelcount;
     public GameObject YourScoreWas;
     public GameObject Highscore;
 
     public float score;
+    public int level;
 
     void Start()
     {
         score = 0f;
+        level = 1;
         scorecount.GetComponent<Text>().text = score.ToString();
+        levelcount.GetComponent<Text>().text = level.ToString();
     }
     void Update()
     {
         scorecount.GetComponent<Text>().text = score.ToString();
+        levelcount.GetComponent<Text>().text = level.ToString();
         YourScoreWas.GetComponent<Text>().text = score.ToString();
         Highscore.GetComponent<Text>().text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
     }

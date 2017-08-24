@@ -7,7 +7,7 @@ public class LaserShot : MonoBehaviour {
     private Rigidbody2D LaserShotRigidBody;
 
     [SerializeField]
-    public float movementSpeed;
+    public static float movementSpeed = 400;
 
     void Start()
     {
@@ -29,12 +29,12 @@ public class LaserShot : MonoBehaviour {
     {
         if (gameObject.tag == "LaserShot1")
         {
-            LaserShotRigidBody.velocity = Vector2.right * movementSpeed;
+            LaserShotRigidBody.velocity = Vector2.right * LaserShot.movementSpeed;
 
         }
         if (gameObject.tag == "LaserShot")
         {
-            LaserShotRigidBody.velocity = Vector2.left * movementSpeed;
+            LaserShotRigidBody.velocity = Vector2.left * LaserShot.movementSpeed;
         }
     }
 

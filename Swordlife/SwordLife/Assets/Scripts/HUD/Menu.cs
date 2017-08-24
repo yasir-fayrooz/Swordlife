@@ -20,6 +20,9 @@ public class Menu : MonoBehaviour {
     public void Play()
     {
         SceneManager.LoadScene("game");
+        LaserShot.movementSpeed = 400;
+        DroneScript.movementSpeed = 250;
+        SawScript.movementSpeed = 400;
     }
 
     public void Quit()

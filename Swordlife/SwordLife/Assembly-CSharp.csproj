@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Enemy\ScorePlusOnExit.cs" />
      <Compile Include="Assets\Scripts\HUD\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\HUD\LevelUp.cs" />
      <Compile Include="Assets\Scripts\HUD\Menu.cs" />
      <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\HUD\PlayAgain.cs" />

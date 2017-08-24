@@ -41,6 +41,9 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        LaserShot.movementSpeed = 400;
+        DroneScript.movementSpeed = 250;
+        SawScript.movementSpeed = 400;
     }
     public void MainMenu()
     {
