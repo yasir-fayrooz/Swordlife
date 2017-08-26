@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 120
+  controlID: 48
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,13 +203,13 @@ MonoBehaviour:
     height: 653
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 15}
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 1
+  m_LastSelected: 2
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -366,8 +366,8 @@ MonoBehaviour:
     height: 632
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 40010000
-    m_LastClickedID: 0
+    m_SelectedIDs: 4e2b0000
+    m_LastClickedID: 11086
     m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -423,9 +423,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 31.069632, y: 10.665261, z: 7.75}
+    m_Target: {x: 27.713966, y: 4.121155, z: 10}
     speed: 2
-    m_Value: {x: 31.069632, y: 10.665261, z: 7.75}
+    m_Value: {x: 27.713966, y: 4.121155, z: 10}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -452,9 +452,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 651.91754
+    m_Target: 560.94556
     speed: 2
-    m_Value: 651.91754
+    m_Value: 560.94556
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -503,7 +503,7 @@ MonoBehaviour:
     - {fileID: 1107630998795725294, guid: 551f1d7a1a99a274a8f99aa4e28e05e9, type: 2}
     - {fileID: 1107988684590666302, guid: a844cea152463974db94553961ce037b, type: 2}
     m_ValueSerializationHelper:
-    - {x: 700, y: 464.19995}
+    - {x: 512.2, y: 464.40002}
     - {x: 538.2, y: 290.20007}
     - {x: 496.60004, y: 358.6}
     - {x: 491.80002, y: 289.40002}
@@ -513,10 +513,10 @@ MonoBehaviour:
     - {x: 526.2, y: 359.2}
     - {x: 512.2, y: 290.40002}
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 551f1d7a1a99a274a8f99aa4e28e05e9,
+  m_AnimatorController: {fileID: 9100000, guid: ffa6cd2906f4aa647ab2b9758ffcca60,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107630998795725294, guid: 551f1d7a1a99a274a8f99aa4e28e05e9,
+  - m_Target: {fileID: 1107170196348380628, guid: ffa6cd2906f4aa647ab2b9758ffcca60,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -567,19 +567,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Animations
+    - Assets/Scripts/HUD
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations
+  - Assets/Scripts/HUD
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Yasir\Desktop\Project 2\Swordlife\Swordlife\SwordLife
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 122a0000
-    m_LastClickedID: 10770
-    m_ExpandedIDs: 000000001226000062260000722700002c2800003e2900000e2a00007e2c0000802c000000ca9a3bffffff7f
+    m_SelectedIDs: 68290000
+    m_LastClickedID: 10600
+    m_ExpandedIDs: 00000000a0260000ea260000e027000088280000842900004a2a00009c2c00009e2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -607,7 +607,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001226000062260000722700002c2800003e2900000e2a00007e2c0000802c0000
+    m_ExpandedIDs: 00000000a0260000ea260000e027000088280000842900004a2a00009c2c00009e2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,7 +712,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 744
-    width: 1811
+    width: 1358
     height: 274
   m_AnimEditor: {fileID: 0}
   m_Locked: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
     y: 91
     width: 558
     height: 927
-  m_ScrollPosition: {x: 0, y: 120}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 244
