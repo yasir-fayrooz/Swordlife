@@ -31,8 +31,8 @@ public class SwordSwing : MonoBehaviour {
                 scoreCount.level += 1;
                 Instantiate(LevelUp, new Vector3(0, -90), Quaternion.identity);
                 LaserShot.movementSpeed += 20;
-                SawScript.movementSpeed += 20;
-                DroneScript.movementSpeed += 20;
+                SawScript.movementSpeed += 10;
+                DroneScript.movementSpeed += 10;
             }
         }
     }

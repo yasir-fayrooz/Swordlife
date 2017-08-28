@@ -15,7 +15,11 @@ public class Names : MonoBehaviour {
     {
 
         //Names
-        if(Text.text == "Yasir Fayrooz")
+        if (Text.text == "Alexander Baldwin")
+        {
+            Text.text = "Yasir Fayrooz";
+        }
+        else if (Text.text == "Yasir Fayrooz")
         {
             Text.text = "Nicholas Bader";
         }
@@ -25,22 +29,60 @@ public class Names : MonoBehaviour {
         }
         else if (Text.text == "Reece Karslake")
         {
-            Text.text = "Yasir Fayrooz";
+            Text.text = "Xuan Trieu Manh";
+        }
+        else if (Text.text == "Xuan Trieu Manh")
+        {
+            Text.text = "Victor Abolarin";
+        }
+        else if (Text.text == "Victor Abolarin")
+        {
+            Text.text = "Chong Zhang";
+        }
+        else if (Text.text == "Chong Zhang")
+        {
+            Text.text = "Martin Ma";
+        }
+        else if (Text.text == "Martin Ma")
+        {
+            Text.text = "Alexander Baldwin";
         }
 
 
         //Roles
-        if (Text.text == "Lead Programmer Animator")
-        {
-            Text.text = "Lead Artist + Sprite guy";
-        }
-        else if (Text.text == "Lead Artist + Sprite guy")
-        {
-            Text.text = "Lead UI Designer + Programmer";
-        }
-        else if (Text.text == "Lead UI Designer + Programmer")
+        if (Text.text == "Project Supervisor")
         {
             Text.text = "Lead Programmer Animator";
+        }
+        else if (Text.text == "Lead Programmer Animator")
+        {
+            Text.text = "Lead Artist + Animator + Sounds";
+        }
+        else if (Text.text == "Lead Artist + Animator + Sounds")
+        {
+            Text.text = "UI Designer Programmer Animator";
+            Text.fontSize = 15;
+        }
+        else if (Text.text == "UI Designer Programmer Animator")
+        {
+            Text.text = "Audio Engineer";
+            Text.fontSize = 18;
+        }
+        else if (Text.text == "Audio Engineer")
+        {
+            Text.text = "Audio Engineer 2";
+        }
+        else if (Text.text == "Audio Engineer 2")
+        {
+            Text.text = "Bug testers, Surveyers, HR";
+        }
+        else if (Text.text == "Bug testers, Surveyers, HR")
+        {
+            Text.text = "Bug testers, Surveyers, HR 2";
+        }
+        else if (Text.text == "Bug testers, Surveyers, HR 2")
+        {
+            Text.text = "Project Supervisor";
         }
     }
 }

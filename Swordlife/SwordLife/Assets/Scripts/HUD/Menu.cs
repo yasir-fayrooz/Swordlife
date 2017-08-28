@@ -9,12 +9,14 @@ public class Menu : MonoBehaviour {
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
     public GameObject Highscore;
+    public GameObject BackGround;
 
     public Slider[] volumeSliders;
 
     void Start()
     {
         Highscore.GetComponent<Text>().text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
+        BackGround.GetComponent<Animator>().Play("Pan_BackGround");
     }
 
     public void Play()
