@@ -11,7 +11,6 @@ public class GameOverManager : MonoBehaviour{
 
     void Start()
     {
-        BackgroundMusic.GetComponent<AudioSource>().Stop();
         HUD.GetComponent<Animator>().Play("HUD_Fade");
     }
 

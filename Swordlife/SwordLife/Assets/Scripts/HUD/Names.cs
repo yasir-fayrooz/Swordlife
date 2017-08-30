@@ -74,13 +74,13 @@ public class Names : MonoBehaviour {
         }
         else if (Text.text == "Audio Engineer 2")
         {
-            Text.text = "Bug testers, Surveyers, HR";
+            Text.text = "Bug testers, Paperwork, HR";
         }
-        else if (Text.text == "Bug testers, Surveyers, HR")
+        else if (Text.text == "Bug testers, Paperwork, HR")
         {
-            Text.text = "Bug testers, Surveyers, HR 2";
+            Text.text = "Bug testers, Paperwork, HR 2";
         }
-        else if (Text.text == "Bug testers, Surveyers, HR 2")
+        else if (Text.text == "Bug testers, Paperwork, HR 2")
         {
             Text.text = "Project Supervisor";
         }

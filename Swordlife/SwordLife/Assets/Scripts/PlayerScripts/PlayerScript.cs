@@ -106,4 +106,9 @@ public class PlayerScript : MonoBehaviour {
         jump = false;
         duck = false;
     }
+
+    public void AttackSound()
+    {
+        FindObjectOfType<AudioManager>().Play("AttackSound");
+    }
 }

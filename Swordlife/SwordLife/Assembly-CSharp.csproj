@@ -71,6 +71,10 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\SwordSwing.cs" />
+     <Compile Include="Assets\Scripts\Sounds\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Sounds\ChangeMusicVolume.cs" />
+     <Compile Include="Assets\Scripts\Sounds\ChangeSFXVolume.cs" />
+     <Compile Include="Assets\Scripts\Sounds\Sounds.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
