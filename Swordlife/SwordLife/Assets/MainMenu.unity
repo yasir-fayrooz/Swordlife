@@ -1509,6 +1509,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: e51d648ef1da78d4396009dc6a382a49, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: AttackSound
     clip: {fileID: 8300000, guid: 5bb7ad7967ebad34d80252505c0052fd, type: 3}
     volume: 1

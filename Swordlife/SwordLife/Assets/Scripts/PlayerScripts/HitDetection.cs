@@ -21,12 +21,14 @@ public class HitDetection : MonoBehaviour {
         }
         if (col.gameObject.tag == "Drone")
         {
+            FindObjectOfType<AudioManager>().Play("ElectrocutedSound");
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Shock_Animation");
             PlayerHP.Damage(1);
         }
         if (col.gameObject.tag == "LaserShot" || col.gameObject.tag == "LaserShot1")
         {
             Destroy(col.gameObject);
+            FindObjectOfType<AudioManager>().Play("ElectrocutedSound");
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Shock_Animation");
             PlayerHP.Damage(1);
         }

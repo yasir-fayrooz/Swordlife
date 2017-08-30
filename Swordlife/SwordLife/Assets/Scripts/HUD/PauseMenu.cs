@@ -35,15 +35,18 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         paused = true;
     }
 
     public void Resume()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         paused = false;
     }
     public void Restart()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene(1);
         LaserShot.movementSpeed = 400;
         DroneScript.movementSpeed = 250;
@@ -51,11 +54,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         paused = false;
         SceneManager.LoadScene(0);
     }
     public void Options()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         PauseUI.transform.GetChild(0).gameObject.SetActive(false);
         PauseUI.transform.GetChild(1).gameObject.SetActive(false);
         PauseUI.transform.GetChild(2).gameObject.SetActive(false);
@@ -65,6 +70,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Back()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         PauseUI.transform.GetChild(0).gameObject.SetActive(true);
         PauseUI.transform.GetChild(1).gameObject.SetActive(true);
         PauseUI.transform.GetChild(2).gameObject.SetActive(true);
@@ -74,6 +80,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Quit()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         Application.Quit();
     }
 }

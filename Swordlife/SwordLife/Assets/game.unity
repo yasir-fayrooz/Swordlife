@@ -4036,6 +4036,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ElectrocutedSound
+    clip: {fileID: 8300000, guid: f5eae4c990bea6f4fa74ec8aa881272a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: e51d648ef1da78d4396009dc6a382a49, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   Volume: {fileID: 1904917327}
 --- !u!4 &1792437841
 Transform:

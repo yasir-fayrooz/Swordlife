@@ -29,33 +29,21 @@ public class Menu : MonoBehaviour {
 
     public void Quit()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         Application.Quit();
     }
 
     public void Options()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         mainMenuHolder.SetActive(false);
         optionsMenuHolder.SetActive(true);
     }
 
     public void MainMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         mainMenuHolder.SetActive(true);
         optionsMenuHolder.SetActive(false);
-    }
-
-    public void SetMasterVolume(float value)
-    {
-        //AudioManager.instance.SetVolume(value, AudioManager.AudioChannel.Master);
-    }
-
-    public void SetMusicVolume(float value)
-    {
-
-    }
-
-    public void SetSFXVolume(float value)
-    {
-
     }
 }
