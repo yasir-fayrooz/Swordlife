@@ -2768,7 +2768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.046000004}
   m_AnchorMax: {x: 0.95500004, y: 0.9575835}
-  m_AnchoredPosition: {x: 0, y: 135.19998}
+  m_AnchoredPosition: {x: 0, y: 135.2}
   m_SizeDelta: {x: -568, y: -411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201703910
@@ -4044,6 +4044,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ButtonPress
     clip: {fileID: 8300000, guid: e51d648ef1da78d4396009dc6a382a49, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseButton
+    clip: {fileID: 8300000, guid: 94fa0fa48c92c364e83019c7515bcf74, type: 3}
     volume: 1
     pitch: 1
     loop: 0

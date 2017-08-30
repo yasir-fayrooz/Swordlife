@@ -21,6 +21,7 @@ public class SawScript : MonoBehaviour {
 	void Update ()
     {
         HandleMovement();
+        HandleSounds();
         offScreen();
 	}
 
@@ -34,6 +35,19 @@ public class SawScript : MonoBehaviour {
         if(spawnSide == false)
         {
             sawRigidbody.velocity = Vector2.left * SawScript.movementSpeed;
+        }
+    }
+
+    private void HandleSounds()
+    {
+        gameObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("SFXVol");
+        if (PauseMenu.paused)
+        {
+            gameObject.GetComponent<AudioSource>().Pause();
+        }
+        else if(PauseMenu.paused == false)
+        {
+            gameObject.GetComponent<AudioSource>().UnPause();
         }
     }
     void spawnArea()

@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseButton;
     public GameObject OptionsMenu;
 
-    private bool paused = false;
+    public static bool paused = false;
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonPress");
+        FindObjectOfType<AudioManager>().Play("PauseButton");
         paused = true;
     }
 
@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene(1);
+        paused = false;
         LaserShot.movementSpeed = 400;
         DroneScript.movementSpeed = 250;
         SawScript.movementSpeed = 400;
