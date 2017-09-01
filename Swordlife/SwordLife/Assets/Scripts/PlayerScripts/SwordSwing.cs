@@ -24,11 +24,14 @@ public class SwordSwing : MonoBehaviour {
         }
         if (col.gameObject.tag == "Drone")
         {
+            FindObjectOfType<AudioManager>().Play("DroneDestroy");
             GameObject.FindGameObjectWithTag("Drone").GetComponent<Animator>().Play("Drone_DestroyOnHit");
             scoreCount.score += 1;
-            if(scoreCount.score % 5 == 0)
+            FindObjectOfType<AudioManager>().Play("ScorePoint");
+            if (scoreCount.score % 5 == 0)
             {
                 scoreCount.level += 1;
+                FindObjectOfType<AudioManager>().Play("LevelUp");
                 Instantiate(LevelUp, new Vector3(0, -90), Quaternion.identity);
                 LaserShot.movementSpeed += 20;
                 SawScript.movementSpeed += 10;

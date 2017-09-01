@@ -16,6 +16,8 @@ public class HitDetection : MonoBehaviour {
     {
         if(col.tag == "Saw")
         {
+            FindObjectOfType<AudioManager>().Play("HitBySaw");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("HitBySaw");
             PlayerHP.Damage(1);
             Destroy(col.gameObject);
         }

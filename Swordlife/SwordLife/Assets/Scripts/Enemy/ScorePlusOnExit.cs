@@ -17,9 +17,11 @@ public class ScorePlusOnExit : MonoBehaviour
         if (col.tag == "Saw")
         {
             scoreCount.score += 1;
+            FindObjectOfType<AudioManager>().Play("ScorePoint");
             if (scoreCount.score % 5 == 0)
             {
                 scoreCount.level += 1;
+                FindObjectOfType<AudioManager>().Play("LevelUp");
                 Instantiate(LevelUp, new Vector3(0, -90), Quaternion.identity);
                 LaserShot.movementSpeed += 20;
                 SawScript.movementSpeed += 10;
@@ -29,9 +31,11 @@ public class ScorePlusOnExit : MonoBehaviour
         if (col.tag == "LaserShot" || col.tag == "LaserShot1")
         {
             scoreCount.score += 1;
+            FindObjectOfType<AudioManager>().Play("ScorePoint");
             if (scoreCount.score % 5 == 0)
             {
                 scoreCount.level += 1;
+                FindObjectOfType<AudioManager>().Play("LevelUp");
                 Instantiate(LevelUp, new Vector3(0, -90), Quaternion.identity);
                 LaserShot.movementSpeed += 20;
                 SawScript.movementSpeed += 10;

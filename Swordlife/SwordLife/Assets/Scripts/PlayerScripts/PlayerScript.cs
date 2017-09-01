@@ -84,6 +84,7 @@ public class PlayerScript : MonoBehaviour {
                 facingRight = true;
             }
             else {
+                FindObjectOfType<AudioManager>().Play("TurnSound");
                 transform.localScale = new Vector3(-PlayerScale, transform.localScale.y);
                 facingRight = true;
             }
@@ -94,8 +95,8 @@ public class PlayerScript : MonoBehaviour {
             {
                 //flip character scale
                 facingRight = false;
+                FindObjectOfType<AudioManager>().Play("TurnSound");
                 transform.localScale = new Vector3(+PlayerScale, transform.localScale.y);
-
             }
         }
     }
@@ -110,5 +111,17 @@ public class PlayerScript : MonoBehaviour {
     public void AttackSound()
     {
         FindObjectOfType<AudioManager>().Play("AttackSound");
+    }
+    public void Jump1Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("Jump1");
+    }
+    public void Jump2Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("Jump2");
+    }
+    public void DuckSound()
+    {
+        FindObjectOfType<AudioManager>().Play("DuckSound");
     }
 }

@@ -49,4 +49,13 @@ public class LaserScript : MonoBehaviour {
 
     }
 
+    public void TurretSound()
+    {
+        FindObjectOfType<AudioManager>().Play("TurretSound");
+    }
+    public void TurretZoomSound()
+    {
+        FindObjectOfType<AudioManager>().Play("TurretZoomSound");
+    }
+
 }

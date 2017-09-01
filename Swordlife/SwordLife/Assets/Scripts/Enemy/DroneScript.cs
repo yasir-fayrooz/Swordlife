@@ -27,12 +27,13 @@ public class DroneScript : MonoBehaviour {
 	void Update ()
     {
         HandleMovement();
+        HandleSounds();
         offScreen();
         HandleShock();
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "LaserShot1" || col.tag == "LaserShot" || col.tag == "Saw")
+        if (col.tag == "LaserShot1" || col.tag == "LaserShot" || col.tag == "Saw")
         {
             CollisionDetect = false;
         }
@@ -71,6 +72,19 @@ public class DroneScript : MonoBehaviour {
         }
     }
 
+    private void HandleSounds()
+    {
+        gameObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("SFXVol");
+        if (PauseMenu.paused)
+        {
+            gameObject.GetComponent<AudioSource>().Pause();
+        }
+        else if (PauseMenu.paused == false)
+        {
+            gameObject.GetComponent<AudioSource>().UnPause();
+        }
+    }
+
     void DroneFly()
     {
         DroneShock = false;
@@ -103,5 +117,10 @@ public class DroneScript : MonoBehaviour {
     {
         if (!GetComponent<Renderer>().isVisible)
             Destroy(gameObject);
+    }
+
+    public void DroneFlySound()
+    {
+        FindObjectOfType<AudioManager>().Play("DroneFlyAway");
     }
 }

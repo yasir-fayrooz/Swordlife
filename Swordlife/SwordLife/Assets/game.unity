@@ -2768,7 +2768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.046000004}
   m_AnchorMax: {x: 0.95500004, y: 0.9575835}
-  m_AnchoredPosition: {x: 0, y: 135.2}
+  m_AnchoredPosition: {x: 0, y: 135.19998}
   m_SizeDelta: {x: -568, y: -411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201703910
@@ -4050,6 +4050,78 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PauseButton
     clip: {fileID: 8300000, guid: 94fa0fa48c92c364e83019c7515bcf74, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump1
+    clip: {fileID: 8300000, guid: 2512cfc3e621c604db7bc47d18c2e50d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump2
+    clip: {fileID: 8300000, guid: 27ec739c80cb80044853857d1134c04a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DroneDestroy
+    clip: {fileID: 8300000, guid: 57be5b6224b88cc4ea2a53c56b99aa9b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TurnSound
+    clip: {fileID: 8300000, guid: 8f806751df879cf42b9f5f10a316d05e, type: 3}
+    volume: 1
+    pitch: 1.44
+    loop: 0
+    source: {fileID: 0}
+  - name: DuckSound
+    clip: {fileID: 8300000, guid: 0e5dd800d2b43484eb6dcd4240bebc4a, type: 3}
+    volume: 1
+    pitch: 0.77
+    loop: 0
+    source: {fileID: 0}
+  - name: DroneSound
+    clip: {fileID: 8300000, guid: 56be46e19da529741bfdf74a15b87904, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DroneFlyAway
+    clip: {fileID: 8300000, guid: a3fb74bc510ef5a46ababf9efdb95da6, type: 3}
+    volume: 1
+    pitch: 0.77
+    loop: 0
+    source: {fileID: 0}
+  - name: TurretSound
+    clip: {fileID: 8300000, guid: 60e7436e4c0dd3c4fae244b51ed84139, type: 3}
+    volume: 1
+    pitch: 0.77
+    loop: 0
+    source: {fileID: 0}
+  - name: TurretZoomSound
+    clip: {fileID: 8300000, guid: ee4af869547d9a5438406683319ce6de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ScorePoint
+    clip: {fileID: 8300000, guid: f1b6aeb275fe2d74882a1fd58726eb04, type: 3}
+    volume: 1
+    pitch: 1.38
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelUp
+    clip: {fileID: 8300000, guid: be5e1ca278ab3254397e21c9496065f8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HitBySaw
+    clip: {fileID: 8300000, guid: a2b73bb0793d63247a7a36c778cc5630, type: 3}
     volume: 1
     pitch: 1
     loop: 0
