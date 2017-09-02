@@ -10,8 +10,6 @@ public class AudioManager : MonoBehaviour {
 
     public static AudioManager instance;
 
-    private float Vol;
-
 
     void Awake()
     {
@@ -29,15 +27,11 @@ public class AudioManager : MonoBehaviour {
     void Start()
     {
         Volume.value = PlayerPrefs.GetFloat("SFXVol");
-        Vol = PlayerPrefs.GetFloat("SFXVol");
     }
 
     void Update()
     {
-        if (Vol != Volume.value)
-        {
-            PlayerPrefs.SetFloat("SFXVol", Volume.value);
-        }
+        PlayerPrefs.SetFloat("SFXVol", Volume.value);
 
         foreach (Sounds s in sounds)
         {

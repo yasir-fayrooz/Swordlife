@@ -11,7 +11,8 @@ public class Menu : MonoBehaviour {
     public GameObject Highscore;
     public GameObject BackGround;
 
-    public Slider[] volumeSliders;
+    public GameObject SFXVolText;
+    public GameObject MusicVolText;
 
     void Start()
     {
@@ -19,8 +20,20 @@ public class Menu : MonoBehaviour {
         BackGround.GetComponent<Animator>().Play("Pan_BackGround");
     }
 
+    void Update()
+    {
+        //Music
+        float SFXVolDecimal = PlayerPrefs.GetFloat("SFXVol") * 100;
+        float MusicVolDecimal = PlayerPrefs.GetFloat("MusicVol") * 100;
+        int MusicVolLevel = (int)MusicVolDecimal;
+        int SFXVolLevel = (int)SFXVolDecimal;
+        SFXVolText.GetComponent<Text>().text = "SFX Volume: " + SFXVolLevel;
+        MusicVolText.GetComponent<Text>().text = "Music Volume: " + MusicVolLevel;
+    }
+
     public void Play()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene("game");
         LaserShot.movementSpeed = 400;
         DroneScript.movementSpeed = 250;
