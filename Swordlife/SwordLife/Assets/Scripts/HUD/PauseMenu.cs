@@ -27,7 +27,6 @@ public class PauseMenu : MonoBehaviour
         if (!paused)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().UnPause();
-            PauseUI.SetActive(true);
             PauseUI.SetActive(false);
             Time.timeScale = 1;
         }
@@ -66,6 +65,7 @@ public class PauseMenu : MonoBehaviour
         PauseUI.transform.GetChild(1).gameObject.SetActive(false);
         PauseUI.transform.GetChild(2).gameObject.SetActive(false);
         PauseUI.transform.GetChild(3).gameObject.SetActive(false);
+        PauseUI.transform.GetChild(4).gameObject.SetActive(false);
         PauseUI.transform.GetChild(5).gameObject.SetActive(false);
         OptionsMenu.SetActive(true);
     }
@@ -76,6 +76,7 @@ public class PauseMenu : MonoBehaviour
         PauseUI.transform.GetChild(1).gameObject.SetActive(true);
         PauseUI.transform.GetChild(2).gameObject.SetActive(true);
         PauseUI.transform.GetChild(3).gameObject.SetActive(true);
+        PauseUI.transform.GetChild(4).gameObject.SetActive(true);
         PauseUI.transform.GetChild(5).gameObject.SetActive(true);
         OptionsMenu.SetActive(false);
     }

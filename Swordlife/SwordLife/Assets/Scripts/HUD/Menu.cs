@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour {
 
     void Start()
     {
+        Time.timeScale = 1;
         Highscore.GetComponent<Text>().text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
         BackGround.GetComponent<Animator>().Play("Pan_BackGround");
     }
