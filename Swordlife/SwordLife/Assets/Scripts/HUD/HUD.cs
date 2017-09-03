@@ -9,6 +9,8 @@ public class HUD : MonoBehaviour
     public Sprite[] HeartSprites;
     public Image HeartUI;
     private PlayerHealth playerHP;
+
+    public AudioSource[] sounds;
     
     // Use this for initialization
     void Start()
@@ -18,6 +20,6 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-            HeartUI.sprite = HeartSprites[playerHP.currentHealth];
+        HeartUI.sprite = HeartSprites[playerHP.currentHealth];
     }
 }

@@ -10,13 +10,19 @@ public class PlayerHealth : MonoBehaviour {
     public int currentHealth;
     public float score;
 
+    private AudioSource[] sounds;
+    private bool alreadyPlayed = false;
+    private bool alreadyPlayed2 = false;
+
     [SerializeField]
     private GameObject gameOverUI;
     
 	// Use this for initialization
 	void Start () {
         currentHealth = startingHealth;
-	}
+        sounds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<HUD>().sounds;
+
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -42,6 +48,17 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
+        sounds[0].Stop();
+        if (!alreadyPlayed)
+        {
+            sounds[2].Play();
+            alreadyPlayed = true;
+        }
+        if (!sounds[2].isPlaying && !alreadyPlayed2)
+        {
+            sounds[1].Play();
+            alreadyPlayed2 = true;
+        }
         if(PlayerPrefs.GetFloat("Highscore") < GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>().score)
         {
             PlayerPrefs.SetFloat("Highscore", GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>().score);
