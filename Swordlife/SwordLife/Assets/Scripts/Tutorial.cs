@@ -164,6 +164,10 @@ public class Tutorial : MonoBehaviour{
         //Laser
         if (Laser2Bool)
         {
+            if (Laser2shot.activeInHierarchy)
+            {
+                Laser2shot.GetComponent<Rigidbody2D>().velocity = Vector2.left * 400;
+            }
             if (Text.text == "Nice work!" || Text.text == "Swipe down to dodge the Laser shot!")
             {
                 if (dist4 < 80)

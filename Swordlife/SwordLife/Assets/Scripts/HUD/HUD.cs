@@ -14,7 +14,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         playerHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        FindObjectOfType<AudioManager>().Play("RunningLiquid");
+        FindObjectOfType<AudioManager>().Play("Liquid");
     }
 
     void Update()
