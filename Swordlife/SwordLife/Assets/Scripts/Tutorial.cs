@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour{
 
@@ -9,6 +10,11 @@ public class Tutorial : MonoBehaviour{
     public Text subText;
 
     private Transform Movement;
+    public Transform ButtonMovement;
+    public GameObject SubText;
+    public GameObject PlayButton;
+    private float PlayerScale;
+
     private Rigidbody2D Drone3RigidBody;
     private Rigidbody2D Drone4RigidBody;
     private Rigidbody2D Saw2RigidBody;
@@ -31,11 +37,14 @@ public class Tutorial : MonoBehaviour{
     public GameObject LevelUI;
     public GameObject ActiveText;
 
+    public GameObject ArrowLeft;
+
     private bool Laser2Bool = false;
 
     void Start()
     {
         Movement = GameObject.FindGameObjectWithTag("Welcome").GetComponent<Transform>();
+        PlayerScale = Player.transform.localScale.x;
         Drone3RigidBody = Drone3.GetComponent<Rigidbody2D>();
         Drone4RigidBody = Drone4.GetComponent<Rigidbody2D>();
         Saw2RigidBody = Saw2.GetComponent<Rigidbody2D>();
@@ -61,12 +70,14 @@ public class Tutorial : MonoBehaviour{
     {
         if(Text.text == "Welcome to SwordLife!")
         {
-            Movement.position = new Vector3(0, -40);
+            Movement.position = new Vector3(0, -38);
+            ButtonMovement.position = new Vector3(0, -78);
             Text.text = "This is your player";
         }
         else if(Text.text == "This is your player")
         {
             Movement.position = new Vector3(0, 0);
+            ButtonMovement.position = new Vector3(0, -70);
             Text.text = "There are 3 different enemies in the game";
         }
         else if (Text.text == "There are 3 different enemies in the game")
@@ -113,6 +124,7 @@ public class Tutorial : MonoBehaviour{
         else if (Text.text == "This is your score bar. Try and get the best highscore possible!")
         {
             Movement.position = new Vector3(-200, 70);
+            ButtonMovement.position = new Vector3(-200, -40);
             ScoreUI.SetActive(false);
             LevelUI.SetActive(true);
             Text.text = "This is your Level bar. Every 5 points, your level increases and so does the enemy speeds!";
@@ -122,6 +134,8 @@ public class Tutorial : MonoBehaviour{
             Movement.position = new Vector3(-200, 70);
             ActiveText.SetActive(false);
             LevelUI.SetActive(false);
+            ButtonMovement.gameObject.SetActive(false);
+            SubText.SetActive(false);
             Movement.position = new Vector3(0, -60);
             WhileLoop();
         }
@@ -154,9 +168,14 @@ public class Tutorial : MonoBehaviour{
             {
                 if (dist4 < 80)
                 {
+                    Movement.position = new Vector3(0, -50);
                     Text.text = "Swipe down to dodge the Laser shot!";
+                    ArrowLeft.GetComponent<Animator>().Play("ArrowDownAnim");
+                    ArrowLeft.SetActive(true);
                     if (Controls.swipeDirection == Swipe.Down)
                     {
+                        ArrowLeft.SetActive(false);
+                        Movement.position = new Vector3(0, 0);
                         Text.text = "Awesome!";
                         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Duck_Animation");
                     }
@@ -165,6 +184,10 @@ public class Tutorial : MonoBehaviour{
             if (dist4 > 200 && Text.text == "Awesome!")
             {
                 Laser2shot.SetActive(false);
+
+                Movement.position = new Vector3(0, 100);
+                Text.text = "You are all set now, press play to get right in the game. Good luck!";
+                PlayButton.SetActive(true);
             }
         }
         //Saw
@@ -176,9 +199,14 @@ public class Tutorial : MonoBehaviour{
 
                 if (dist3 < 160)
                 {
+                    Movement.position = new Vector3(0, -50);
                     Text.text = "Swipe up to dodge the Drone!";
+                    ArrowLeft.GetComponent<Animator>().Play("ArrowUpAnim");
+                    ArrowLeft.SetActive(true);
                     if (Controls.swipeDirection == Swipe.Up)
                     {
+                        ArrowLeft.SetActive(false);
+                        Movement.position = new Vector3(0, 0);
                         Text.text = "Nice work!";
                         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Jump_Animation");
                     }
@@ -198,10 +226,16 @@ public class Tutorial : MonoBehaviour{
             Drone4RigidBody.velocity = Vector2.left * 200;
             if (dist2 < 165)
             {
+                Movement.position = new Vector3(0, -50);
                 Text.text = "Swipe right to destroy the Drone!";
+                ArrowLeft.GetComponent<Animator>().Play("ArrowRightAnim");
+                ArrowLeft.SetActive(true);
                 if (Controls.swipeDirection == Swipe.Right)
                 {
+                    ArrowLeft.SetActive(false);
+                    Player.transform.localScale = new Vector3(-PlayerScale, 15);
                     Drone4RigidBody.velocity = Vector2.left * 0;
+                    Movement.position = new Vector3(0, 0);
                     Text.text = "Good Job!";
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation");
                     Saw2.SetActive(true);
@@ -211,16 +245,25 @@ public class Tutorial : MonoBehaviour{
         //Drone3
         if (dist < 165 && Drone3.activeInHierarchy && !Drone4.activeInHierarchy)
           {
-             Text.text = "Swipe left to destroy the Drone!";
+            Movement.position = new Vector3(0, -50);
+            Text.text = "Swipe left to destroy the Drone!";
+            ArrowLeft.SetActive(true);
             if (Controls.swipeDirection == Swipe.Left)
             {
+                ArrowLeft.SetActive(false);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation");
                 Text.text = "Good Job!";
+                Movement.position = new Vector3(0, 0);
                 Drone4.SetActive(true);
                 Drone3RigidBody.velocity = Vector2.right * 0;
             }
           }
     }
 
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 }
