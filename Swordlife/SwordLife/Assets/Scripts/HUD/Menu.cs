@@ -35,10 +35,17 @@ public class Menu : MonoBehaviour {
     public void Play()
     {
         FindObjectOfType<AudioManager>().Play("ButtonPress");
+        if(PlayerPrefs.GetFloat("Highscore") == 0)
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+        else
+        {
         SceneManager.LoadScene("game");
-        LaserShot.movementSpeed = 400;
-        DroneScript.movementSpeed = 250;
-        SawScript.movementSpeed = 400;
+            LaserShot.movementSpeed = 400;
+            DroneScript.movementSpeed = 250;
+            SawScript.movementSpeed = 400;
+        }
     }
 
     public void Quit()

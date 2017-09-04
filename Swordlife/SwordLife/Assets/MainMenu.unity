@@ -1425,12 +1425,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: AttackSound
-    clip: {fileID: 8300000, guid: 5bb7ad7967ebad34d80252505c0052fd, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   Volume: {fileID: 1409114710}
 --- !u!4 &1273163106
 Transform:

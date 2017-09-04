@@ -68,6 +68,7 @@ public class Tutorial : MonoBehaviour{
 
     public void Next()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         if(Text.text == "Welcome to SwordLife!")
         {
             Movement.position = new Vector3(0, -38);
@@ -174,14 +175,15 @@ public class Tutorial : MonoBehaviour{
                 {
                     Movement.position = new Vector3(0, -50);
                     Text.text = "Swipe down to dodge the Laser shot!";
-                    ArrowLeft.GetComponent<Animator>().Play("ArrowDownAnim");
                     ArrowLeft.SetActive(true);
+                    ArrowLeft.GetComponent<Animator>().Play("ArrowDownAnim");
                     if (Controls.swipeDirection == Swipe.Down)
                     {
+                        FindObjectOfType<AudioManager>().Play("TutorialPlus");
                         ArrowLeft.SetActive(false);
                         Movement.position = new Vector3(0, 0);
                         Text.text = "Awesome!";
-                        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Duck_Animation");
+                        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Duck_Animation 1");
                     }
                 }
             }
@@ -205,14 +207,15 @@ public class Tutorial : MonoBehaviour{
                 {
                     Movement.position = new Vector3(0, -50);
                     Text.text = "Swipe up to dodge the Drone!";
-                    ArrowLeft.GetComponent<Animator>().Play("ArrowUpAnim");
                     ArrowLeft.SetActive(true);
+                    ArrowLeft.GetComponent<Animator>().Play("ArrowUpAnim");
                     if (Controls.swipeDirection == Swipe.Up)
                     {
+                        FindObjectOfType<AudioManager>().Play("TutorialPlus");
                         ArrowLeft.SetActive(false);
                         Movement.position = new Vector3(0, 0);
                         Text.text = "Nice work!";
-                        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Jump_Animation");
+                        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Jump_Animation 1");
                     }
                 }
             }
@@ -232,16 +235,17 @@ public class Tutorial : MonoBehaviour{
             {
                 Movement.position = new Vector3(0, -50);
                 Text.text = "Swipe right to destroy the Drone!";
-                ArrowLeft.GetComponent<Animator>().Play("ArrowRightAnim");
                 ArrowLeft.SetActive(true);
+                ArrowLeft.GetComponent<Animator>().Play("ArrowRightAnim");
                 if (Controls.swipeDirection == Swipe.Right)
                 {
+                    FindObjectOfType<AudioManager>().Play("TutorialPlus");
                     ArrowLeft.SetActive(false);
                     Player.transform.localScale = new Vector3(-PlayerScale, 15);
                     Drone4RigidBody.velocity = Vector2.left * 0;
                     Movement.position = new Vector3(0, 0);
                     Text.text = "Good Job!";
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation");
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation 1");
                     Saw2.SetActive(true);
                 }
             }
@@ -254,8 +258,9 @@ public class Tutorial : MonoBehaviour{
             ArrowLeft.SetActive(true);
             if (Controls.swipeDirection == Swipe.Left)
             {
+                FindObjectOfType<AudioManager>().Play("TutorialPlus");
                 ArrowLeft.SetActive(false);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation 1");
                 Text.text = "Good Job!";
                 Movement.position = new Vector3(0, 0);
                 Drone4.SetActive(true);
@@ -267,6 +272,7 @@ public class Tutorial : MonoBehaviour{
 
     public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene(1);
     }
 
