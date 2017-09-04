@@ -9,11 +9,14 @@ public class Tutorial : MonoBehaviour{
     public Text subText;
 
     private Transform Movement;
-    private Rigidbody2D Drone1RigidBody;
+    private Rigidbody2D Drone3RigidBody;
+    private Rigidbody2D Drone4RigidBody;
 
     //enemies
     public GameObject Drone1;
     public GameObject Drone2;
+    public GameObject Drone3;
+    public GameObject Drone4;
     public GameObject Saw;
     public GameObject Laser;
 
@@ -22,18 +25,22 @@ public class Tutorial : MonoBehaviour{
     public GameObject HealthBar;
     public GameObject ScoreUI;
     public GameObject LevelUI;
-
-    private float dist;
+    public GameObject ActiveText;
 
     void Start()
     {
         Movement = GameObject.FindGameObjectWithTag("Welcome").GetComponent<Transform>();
-        Drone1RigidBody = Drone1.GetComponent<Rigidbody2D>();
+        Drone3RigidBody = Drone3.GetComponent<Rigidbody2D>();
+        Drone4RigidBody = Drone4.GetComponent<Rigidbody2D>();
         Words();
     }
 
     void Update()
     {
+        if (Drone3RigidBody.velocity.x > 1)
+        {
+            WhileLoop();
+        }
     }
 
     private void Words()
@@ -106,20 +113,45 @@ public class Tutorial : MonoBehaviour{
         else if (Text.text == "This is your Level bar. Every 5 points, your level increases and so does the enemy speeds!")
         {
             Movement.position = new Vector3(-200, 70);
+            ActiveText.SetActive(false);
             LevelUI.SetActive(false);
-            Drone1.SetActive(true);
-            Drone1.GetComponent<Transform>().position = new Vector3(-480, -160);
-            Drone1RigidBody.velocity = Vector2.right * 200;
-            dist = Vector3.Distance(Drone1.GetComponent<Transform>().position, Player.GetComponent<Transform>().position);
-            Debug.Log(dist);
-            if (dist < 200)
-            {
-                Time.timeScale = 0;
-                return;
-            }
+            
+            WhileLoop();
         }
+        else if (Text.text == "Good Job!")
+        {
+            Movement.position = new Vector3(0, -60);
+            ActiveText.SetActive(false);
+            WhileLoop();
+        }
+    }
 
+    private void WhileLoop()
+    {
+        float dist = Vector3.Distance(Drone3.GetComponent<Transform>().position, Player.GetComponent<Transform>().position);
+        Drone3RigidBody.velocity = Vector2.right * 200;
+        if (dist < 165)
+          {
+             Time.timeScale = 0;
+             Movement.position = new Vector3(0, -60);
+             Text.text = "Swipe left to destroy the Drone!";
+             ActiveText.SetActive(true);
 
+            if (Controls.swipeDirection == Swipe.Left)
+            {
+               Time.timeScale = 1;
+               GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Attack_Animation");
+               Text.text = "Good Job!";
+               Drone3RigidBody.velocity = Vector2.right * 0;
+            }
+         }
+
+        if (Text.text == "Good Job!")
+        {
+            Drone4.SetActive(true);
+            float dist2 = Vector3.Distance(Drone4.GetComponent<Transform>().position, Player.GetComponent<Transform>().position);
+            Drone4RigidBody.velocity = Vector2.left * 200;
+        }
 
     }
 
