@@ -129,20 +129,6 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0
-    functionName: TurretZoomSound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.41666666
-    functionName: TurretSound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 1.4166666
     functionName: Shoot
     data: 
@@ -150,8 +136,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.9166666
-    functionName: offScreen
+  - time: 2.1666667
+    functionName: setActive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
