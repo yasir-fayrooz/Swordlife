@@ -9,13 +9,12 @@ public class HUD : MonoBehaviour
     public Sprite[] HeartSprites;
     public Image HeartUI;
     private PlayerHealth playerHP;
-
-    public AudioSource[] sounds;
     
     // Use this for initialization
     void Start()
     {
         playerHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        FindObjectOfType<AudioManager>().Play("RunningLiquid");
     }
 
     void Update()

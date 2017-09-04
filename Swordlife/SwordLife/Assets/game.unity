@@ -3088,7 +3088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.046000004}
   m_AnchorMax: {x: 0.95500004, y: 0.9575835}
-  m_AnchoredPosition: {x: 0, y: 135.19998}
+  m_AnchoredPosition: {x: 0, y: 135.2}
   m_SizeDelta: {x: -568, y: -411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201703910
@@ -3402,6 +3402,7 @@ GameObject:
   - component: {fileID: 1466598078}
   - component: {fileID: 1466598079}
   - component: {fileID: 1466598080}
+  - component: {fileID: 1466598085}
   - component: {fileID: 1466598081}
   - component: {fileID: 1466598082}
   - component: {fileID: 1466598083}
@@ -3526,10 +3527,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 55ac32dc7e824764ead0e1cca2d89115, type: 3}
   - {fileID: 21300000, guid: 8134e5966179b8d45ac0ca9cdaafc4a6, type: 3}
   HeartUI: {fileID: 1168336791}
-  sounds:
-  - {fileID: 1466598082}
-  - {fileID: 1466598083}
-  - {fileID: 1466598084}
 --- !u!114 &1466598080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,6 +3798,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1466598085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466598071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a08c9fb07f36499b7685d535870d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 1466598082}
+  - {fileID: 1466598083}
+  - {fileID: 1466598084}
 --- !u!1 &1494446640
 GameObject:
   m_ObjectHideFlags: 0

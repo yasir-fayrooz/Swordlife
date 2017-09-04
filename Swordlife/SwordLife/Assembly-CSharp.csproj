@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\HUD\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\HUD\LevelUp.cs" />
+     <Compile Include="Assets\Scripts\HUD\MainMenuCamera.cs" />
      <Compile Include="Assets\Scripts\HUD\Menu.cs" />
      <Compile Include="Assets\Scripts\HUD\Names.cs" />
      <Compile Include="Assets\Scripts\HUD\PauseMenu.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\Sounds\ChangeMusicVolume.cs" />
      <Compile Include="Assets\Scripts\Sounds\ChangeSFXVolume.cs" />
      <Compile Include="Assets\Scripts\Sounds\Sounds.cs" />
+     <Compile Include="Assets\Scripts\Tutorial.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

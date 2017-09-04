@@ -11,7 +11,7 @@ public class ChangeMusicVolume : MonoBehaviour {
     void Start()
     {
         Volume.value = PlayerPrefs.GetFloat("MusicVol");
-        MyMusic = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<HUD>().sounds;
+        MyMusic = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainMenuCamera>().sounds;
     }
 	// Update is called once per frame
 	void Update ()

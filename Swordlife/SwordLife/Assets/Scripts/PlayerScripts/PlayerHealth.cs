@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentHealth = startingHealth;
-        sounds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<HUD>().sounds;
+        sounds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainMenuCamera>().sounds;
 
     }
 	
