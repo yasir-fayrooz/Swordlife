@@ -44,6 +44,13 @@ public class AudioManager : MonoBehaviour {
         foreach (Sounds s in sounds)
         {
             s.source.volume = PlayerPrefs.GetFloat("SFXVol");
+            if(s.name == "Liquid" && PauseMenu.paused)
+            {
+                s.source.mute = true;
+            } else
+            {
+                s.source.mute = false;
+            }
         }
     }
 
