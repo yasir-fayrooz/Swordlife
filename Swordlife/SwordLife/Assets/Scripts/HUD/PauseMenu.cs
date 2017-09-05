@@ -60,6 +60,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Options()
     {
+        paused = true;
         FindObjectOfType<AudioManager>().Play("ButtonPress");
         PauseUI.transform.GetChild(0).gameObject.SetActive(false);
         PauseUI.transform.GetChild(1).gameObject.SetActive(false);

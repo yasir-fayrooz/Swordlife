@@ -47,6 +47,11 @@ public class Menu : MonoBehaviour {
             SawScript.movementSpeed = 400;
         }
     }
+    public void Tutorial()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
+        SceneManager.LoadScene("Tutorial");
+    }
 
     public void Quit()
     {
