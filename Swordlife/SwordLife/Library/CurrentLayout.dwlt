@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 48
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1362
     height: 948
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 49
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1362
     height: 661
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 50
+  controlID: 13
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 422
     height: 661
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -366,9 +366,9 @@ MonoBehaviour:
     height: 640
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 503a0000
-    m_LastClickedID: 14928
-    m_ExpandedIDs: 2498ffff7cecffff00000000f0390000703a0000
+    m_SelectedIDs: 3a330000
+    m_LastClickedID: 13114
+    m_ExpandedIDs: 88e6ffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -583,19 +583,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts/HUD
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/HUD
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Yasir\Desktop\2\Swordlife\Swordlife\SwordLife
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 1c300000
-    m_LastClickedID: 12316
-    m_ExpandedIDs: 000000001c30000080300000d4310000a6320000ce32000028340000943400006a350000703500003a3800003c38000000ca9a3bffffff7f
+    m_SelectedIDs: 882b0000
+    m_LastClickedID: 11144
+    m_ExpandedIDs: 0000000028260000b42600007a280000b2290000e6290000c62b0000542c0000822d00008a2d0000f8300000fa30000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,7 +623,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c30000080300000d4310000a6320000ce32000028340000943400006a350000703500003a3800003c380000
+    m_ExpandedIDs: 0000000028260000b42600007a280000b2290000e6290000c62b0000542c0000822d00008a2d0000f8300000fa300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +758,7 @@ MonoBehaviour:
     y: 91
     width: 556
     height: 927
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 50.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 232

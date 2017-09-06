@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour {
 
     void Start()
     {
-        if(PlayerPrefs.GetFloat("SFXVol") == 0 && Volume.value == 1)
+        if (!PlayerPrefs.HasKey("SFXVol"))
         {
             PlayerPrefs.SetFloat("SFXVol", 1);
         }

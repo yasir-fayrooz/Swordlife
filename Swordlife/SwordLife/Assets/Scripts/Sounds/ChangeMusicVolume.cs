@@ -10,7 +10,7 @@ public class ChangeMusicVolume : MonoBehaviour {
 
     void Start()
     {
-        if (PlayerPrefs.GetFloat("MusicVol") == 0 && Volume.value == 1)
+        if (!PlayerPrefs.HasKey("MusicVol"))
         {
             PlayerPrefs.SetFloat("MusicVol", 1);
         }
