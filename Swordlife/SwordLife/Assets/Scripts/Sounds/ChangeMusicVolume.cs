@@ -29,5 +29,5 @@ public class ChangeMusicVolume : MonoBehaviour {
         {
             music.volume = PlayerPrefs.GetFloat("MusicVol");
         }
-	}
+    }
 }

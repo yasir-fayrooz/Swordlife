@@ -274,6 +274,9 @@ public class Tutorial : MonoBehaviour{
     {
         FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene(1);
+        LaserShot.movementSpeed = 400;
+        DroneScript.movementSpeed = 250;
+        SawScript.movementSpeed = 400;
     }
 
 }

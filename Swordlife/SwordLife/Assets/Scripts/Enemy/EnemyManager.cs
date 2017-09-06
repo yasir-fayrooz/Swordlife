@@ -4,7 +4,7 @@ public class EnemyManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;       // Reference to the player's heatlh.
     public GameObject[] enemies;                // The enemy prefab to be spawned.
-    public float spawnTime = 7f;            // How long between each spawn.
+    private float spawnTime = 2.5f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
     public bool spawnSide;
     void Start()

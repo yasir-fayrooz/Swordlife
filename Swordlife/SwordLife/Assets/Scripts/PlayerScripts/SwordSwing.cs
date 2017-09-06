@@ -7,12 +7,14 @@ public class SwordSwing : MonoBehaviour {
     private scoreCount scoreCount;
     private PlayerHealth PlayerHP;
     public GameObject LevelUp;
+    private AudioSource[] MyMusic;
 
 
     void Start()
     {
         PlayerHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         scoreCount = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<scoreCount>();
+        MyMusic = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainMenuCamera>().sounds;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -30,6 +32,7 @@ public class SwordSwing : MonoBehaviour {
             FindObjectOfType<AudioManager>().Play("ScorePoint");
             if (scoreCount.score % 5 == 0)
             {
+                MyMusic[0].pitch = MyMusic[0].pitch + 0.02f;
                 scoreCount.level += 1;
                 FindObjectOfType<AudioManager>().Play("LevelUp");
                 Instantiate(LevelUp, new Vector3(0, -90), Quaternion.identity);
