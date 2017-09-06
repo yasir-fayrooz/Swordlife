@@ -646,6 +646,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 276712929}
+--- !u!1001 &291480705
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697378533113424, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630673366864614, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3e63df3fc3fef9849babf50e40b22be5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &322048444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.046000004}
   m_AnchorMax: {x: 0.95500004, y: 0.9575835}
-  m_AnchoredPosition: {x: 0, y: 135.19998}
+  m_AnchoredPosition: {x: 0, y: 135.2}
   m_SizeDelta: {x: -568, y: -411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201703910
