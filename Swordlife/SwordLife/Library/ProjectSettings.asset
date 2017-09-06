@@ -18,7 +18,7 @@ PlayerSettings:
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
-  m_SplashScreenAnimation: 1
+  m_SplashScreenAnimation: 2
   m_SplashScreenLogoStyle: 1
   m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 1
@@ -232,27 +232,27 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1101df6dbb0a7b64d987a94624e37004, type: 3}
+      m_Icon: {fileID: 2800000, guid: 432c0dfd500431144967f7ecb5dd2517, type: 3}
       m_Width: 192
       m_Height: 192
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 672d9dd9fc01f844585ffcffd7fff874, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 144
       m_Height: 144
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c536454a649f2f64da6367047f4e3c70, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 96
       m_Height: 96
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 57019f38437da8b49b96b4e80d1c8a0c, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 72
       m_Height: 72
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: cf5c177de21af7a4e994c999dd646652, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 48
       m_Height: 48
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 60143cfc02645814a9b013b9e680457f, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 36
       m_Height: 36
   m_BuildTargetBatching: []
@@ -508,7 +508,8 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psp2ScriptOptimizationLevel: 0
   psmSplashimage: {fileID: 0}
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 1101df6dbb0a7b64d987a94624e37004,
+    type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   spritePackerPolicy: 
   webGLMemorySize: 256
