@@ -46,10 +46,19 @@ public class AudioManager : MonoBehaviour {
             s.source.volume = PlayerPrefs.GetFloat("SFXVol");
             if(s.name == "Liquid" && PauseMenu.paused)
             {
-                s.source.mute = true;
-            } else
+                s.source.Pause();
+            }
+            else if (s.name == "TurretSound" && PauseMenu.paused)
             {
-                s.source.mute = false;
+                s.source.Pause();
+            }
+            else if (s.name == "TurretZoomSound" && PauseMenu.paused)
+            {
+                s.source.Pause();
+            }
+            else
+            {
+                s.source.UnPause();
             }
         }
     }
