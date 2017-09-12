@@ -34,6 +34,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        if (paused)
+        {
+            return;
+        }
         FindObjectOfType<AudioManager>().Play("PauseButton");
         paused = true;
     }
@@ -60,6 +64,10 @@ public class PauseMenu : MonoBehaviour
     }
     public void Options()
     {
+        if (OptionsMenu.activeInHierarchy)
+        {
+            return;
+        }
         paused = true;
         FindObjectOfType<AudioManager>().Play("ButtonPress");
         PauseUI.transform.GetChild(0).gameObject.SetActive(false);
