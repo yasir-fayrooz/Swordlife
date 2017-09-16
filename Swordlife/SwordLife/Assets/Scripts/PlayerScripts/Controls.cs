@@ -67,51 +67,50 @@ public class Controls : MonoBehaviour
                 }
             }
         }
-        else {
+        /*  else {
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                firstClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            }
-            else {
-                swipeDirection = Swipe.None;
-                //Debug.Log ("None");
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                secondClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-                currentSwipe = new Vector3(secondClickPos.x - firstClickPos.x, secondClickPos.y - firstClickPos.y);
+  if (Input.GetMouseButtonDown(0))
+  {
+      firstClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+  }
+  else {
+      swipeDirection = Swipe.None;
+  }
+  if (Input.GetMouseButtonUp(0))
+  {
+      secondClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+      currentSwipe = new Vector3(secondClickPos.x - firstClickPos.x, secondClickPos.y - firstClickPos.y);
 
-                // Make sure it was a legit swipe, not a tap
-                if (currentSwipe.magnitude < minSwipeLength)
-                {
-                    swipeDirection = Swipe.None;
-                    return;
-                }
+      // Make sure it was a legit swipe, not a tap
+      if (currentSwipe.magnitude < minSwipeLength)
+      {
+          swipeDirection = Swipe.None;
+          return;
+      }
 
-                currentSwipe.Normalize();
+      currentSwipe.Normalize();
 
-                //Swipe directional check
+      //Swipe directional check
 
-                if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-                {
-                    swipeDirection = Swipe.Up;
-                }
-                else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-                {
-                    swipeDirection = Swipe.Down;
-                }
-                else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
-                {
-                    swipeDirection = Swipe.Left;
+      if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+      {
+          swipeDirection = Swipe.Up;
+      }
+      else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+      {
+          swipeDirection = Swipe.Down;
+      }
+      else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+      {
+          swipeDirection = Swipe.Left;
 
-                }
-                else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
-                {
-                    swipeDirection = Swipe.Right;
-                }
-            }
-
-        }
+      }
+      else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+      {
+          swipeDirection = Swipe.Right;
+      }
+  }
+    }
+      */
     }
 }
