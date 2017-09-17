@@ -218,7 +218,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeyaliasName: swordlifekey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 0
