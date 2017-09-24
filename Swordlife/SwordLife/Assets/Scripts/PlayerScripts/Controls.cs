@@ -70,7 +70,7 @@ public class Controls : MonoBehaviour
         else {
             swipeDirection = Swipe.None;
         }
-
+/*
   if (Input.GetMouseButtonDown(0))
   {
       firstClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -112,6 +112,6 @@ public class Controls : MonoBehaviour
           swipeDirection = Swipe.Right;
       }
   }  
-  
+  */
     }
 }
