@@ -154,7 +154,7 @@ public class Tutorial : MonoBehaviour{
             Drone3RigidBody.velocity = Vector2.right * 200;
         }
 
-        if (Text.text == "Swipe right to destroy the Drone!" || Text.text == "Swipe left to destroy the Drone!" || Text.text == "Swipe up to dodge the Drone!" || Text.text == "Swipe down to dodge the Laser shot!")
+        if (Text.text == "Swipe right to destroy the Drone!" || Text.text == "Swipe left to destroy the Drone!" || Text.text == "Swipe up to dodge the Saw!" || Text.text == "Swipe down to dodge the Laser shot!")
         {
             ActiveText.SetActive(true);
             Time.timeScale = 0;
@@ -206,7 +206,7 @@ public class Tutorial : MonoBehaviour{
                 if (dist3 < 160)
                 {
                     Movement.position = new Vector3(0, -50);
-                    Text.text = "Swipe up to dodge the Drone!";
+                    Text.text = "Swipe up to dodge the Saw!";
                     ArrowLeft.SetActive(true);
                     ArrowLeft.GetComponent<Animator>().Play("ArrowUpAnim");
                     if (Controls.swipeDirection == Swipe.Up)

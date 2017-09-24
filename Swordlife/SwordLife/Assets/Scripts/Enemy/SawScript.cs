@@ -12,6 +12,7 @@ public class SawScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        gameObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("SFXVol");
         sawRigidbody = GetComponent<Rigidbody2D>();
         spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
         spawnArea();

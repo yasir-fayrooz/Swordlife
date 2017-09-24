@@ -16,7 +16,7 @@ public class DroneScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-
+        gameObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("SFXVol");
         DroneRigidbody = GetComponent<Rigidbody2D>();
         spawnSide = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().spawnSide;
         spawnArea();
