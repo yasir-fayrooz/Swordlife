@@ -7,7 +7,7 @@ public class SawScript : MonoBehaviour {
     private Rigidbody2D sawRigidbody;
     private bool spawnSide;
     [SerializeField]
-    public static float movementSpeed = 400;
+    public static float movementSpeed = 200;
 
 	// Use this for initialization
 	void Start ()
